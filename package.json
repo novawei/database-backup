@@ -1,0 +1,34 @@
+{
+  "name": "@novawei/database-backup",
+  "version": "1.0.0",
+  "description": "mysql/mongodb backup",
+  "main": "index.js",
+  "scripts": {
+    "schedule": "pm2 start ./backup_scheduled.js --name database-backup",
+    "backup": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/novawei/database-backup.git"
+  },
+  "author": "novawei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/novawei/database-backup/issues"
+  },
+  "homepage": "https://github.com/novawei/database-backup#readme",
+  "dependencies": {
+    "del": "^5.1.0",
+    "mongodb-backup": "^1.6.9",
+    "mysqldump": "^3.1.0",
+    "node-schedule": "^1.3.2",
+    "yml": "^1.0.0"
+  },
+  "keywords": [
+    "mysql",
+    "mongodb",
+    "backup",
+    "scheduled-backup"
+  ]
+}

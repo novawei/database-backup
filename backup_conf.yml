@@ -1,0 +1,23 @@
+cron: 0 0 2 1/7 * *
+backups:
+  - name: backup name
+    dbtype: mongodb
+    dbconf:
+      host: xxx.xxx.xxx.xxx
+      port: 27017
+      database:
+        - databaseToBackup
+    destDir: D:\backup\projectName
+  - name: backup name
+    dbtype: mysql
+    dbconf:
+      host: xxx.xxx.xxx.xxx
+      port: 3306
+      user: root
+      password: 123456
+      database:
+        - databaseToBackup1
+        - databaseToBackup2
+    destDir: D:\backup\projectName
+
+    
